@@ -1,131 +1,301 @@
-*{
-    margin: 0;
-    box-sizing: border-box;
+
+* {
+  margin: 0;
+  box-sizing: border-box;
 }
-body{
-    font-size: 16px;
-    background: #efefef;
+body {
+  font-size: 16px;
+  background: #efefef;
 }
 
-.container{
-    padding: 0 15px;
-    max-width:1140px;
-    margin: 0 auto;
-    /* To center the container  */
+.container {
+  padding: 0 15px;
+  max-width: 1140px;
+  margin: 0 auto;
+  /* To center the container  */
 }
-.app-header{
-    background: #fff;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    /* OVERLAY PROPERTY  */
-    height: 70px;
-    /* overflow: hidden ; */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.app-header {
+  background: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  /* OVERLAY PROPERTY  */
+  height: 70px;
+  /* overflow: hidden ; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* padding: 0 20px; */
+  padding-left: 70px;
+  padding-right: 70px;
 }
+
 
 .sub-menu-items,
-.menu-items{
-    display: flex;
-    list-style: none;
-    padding: 0;
-    background: #fff;
-   
+.menu-items {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  background: #fff;
 }
 .menu-items li {
-    position: relative;
+  position: relative;
 }
 
 .sub-menu-items li a,
-.menu-items li  a{
-    color: #000000;
-    text-decoration: none;
-    padding: 5px 15px;
-    display: inline-block;
+.menu-items li a {
+  color: #000000;
+  text-decoration: none;
+  padding: 5px 15px;
+  display: inline-block;
+  justify-content: center;
+  color: #ff3300;
+  font-size: larger;
+  font-weight: bold;
 }
 
 .sub-menu-items li a:hover,
-.menu-items li a:hover{
-    color: red;
+.menu-items li a:hover {
+  color: red;
 }
 
-.logo-name{
-    padding-left: 15px;
-}
-
+/* .logo-name {
+   padding-left: 15px; 
+} */
 
 .sub-menu-items {
-    flex-direction: column;
-    padding: 10px 0;
-    border: 1px solid grey;
-    border-radius: 8px;
-    display: none;
+  flex-direction: column;
+  padding: 10px 0;
+  border: 1px solid grey;
+  border-radius: 8px;
+  display: none;
 }
-.menu-items li:hover ul{
-    display: flex;
-    position: absolute;
-    top: 28px;
-    left: 0;
-
+.menu-items li:hover ul {
+  display: flex;
+  position: absolute;
+  top: 28px;
+  left: 0;
 }
 
+button {
+  background-color: #ff3300;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  /* margin-left: 494px; */
+  /* margin-bottom: 20px; */
+  transition: background-color 0.3s;
+}
 
 /* MAIN  */
-.main-content{
-    height: 500px;
+
+
+.main-content {
+  height: 500px;
 }
+
+.logo-name img {
+  width: 100px;
+  padding: 9px;
+  /* margin: 90px; */
+}
+.container {
+  padding: 0 15px;
+  max-width: 1140px;
+  margin: 0 auto; /* Centers the container */
+}
+
+.main {
+  padding: 120px 0; /* Adds space above and below the section */
+  background: #fefefe;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center; /* Centers items vertically */
+}
+
+.col-6 {
+  flex: 1;
+  padding: 20px;
+}
+
+.text-content h1 {
+  font-size: 48px;
+  color: #001f60;
+  margin-bottom: 20px;
+}
+
+.text-content p {
+  font-size: 18px; /* Adjust font size */
+  color: #5a5a5a; /* Matches the gray shade */
+  margin-bottom: 30px; /* Space between paragraph and button */
+  line-height: 1.5; /* Improves readability */
+}
+
+.contact-btn {
+  background-color: #ff3300; /* Button color as per design */
+  color: #fff;
+  border: none;
+  padding: 9px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  font-size: 13px;
+  margin: 10px;
+}
+
+.contact-btn:hover {
+  background-color: #cc2900; /* Darker shade on hover */
+}
+
+.image-content img {
+  width: 100%;
+  max-width: 600px; /* Sets max width to control size */
+  object-fit: cover; /* Maintains aspect ratio */
+}
+.heading {
+  text-align: center;
+  font-size: large;
+  padding-top: 30px;
+  background: #fefefe;
+}
+.disc {
+  text-align: center;
+  background: #fefefe;
+  /* padding: 20px; */
+}
+.container-title {
+  background: #fefefe;
+  padding: 86px;
+}
+
+.container-width {
+  padding: 0 65px;
+}
+
+.about-text h2 {
+  font-weight: bold;
+  max-width: 651px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  line-height: 60px;
+  font-size: 42px;
+}
+
+.about-text > .disc {
+  font-size: 20px;
+  max-width: 900px;
+  font-weight: 200;
+
+  margin-bottom: 10px;
+  color: grey;
+}
+
+
+/* FORM  */
+ input[type=text],select,
+ textarea{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+ }
+
+ label{
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+ }
+ input[type=submit]{
+    background-color: #04aa6d;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointet;
+    float: right;
+ }
+ input[type=submit]:hover
+{
+    background-color: #45a049;
+}
+.container{
+    border-radius: 5px;
+    background-color: #efefef;
+    padding: 20px;
+}
+.col-25{
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+}
+.col-75{
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+}
+
 
 /* FOOTER  */
 
-.app-footer{
-    background: #fff;
-    padding: 50px;
+.app-footer {
+  background: #fff;
+  padding: 50px;
+  background: url(./assets/images/footerwave.png);
+  background-size: cover;
+  background-position: bottom;
+  background-color: #36373c;
+  padding-top: 50px;
 }
-.footer-top-part{
-    display: flex;
-    /* to align all the div 
-    side by side inside the container  */
-    padding-bottom: 20px;
-    gap: 20px;
-    /* always use with flex property  */
-}
-
-.footer-top-part h4{
-    margin-bottom: 15px;
-    font-size: 20px;
-}
-
-.footer-bottom-part{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 15px 0;
-    /* border: 1px solid grey; */
-    gap: 12px;
-}
-.footer-links a{
-    display: block;
-    text-decoration: none;
-    margin-bottom: 15px;
-    color: black;
+.footer-top-part {
+  display: flex;
+  /* to align all the div 
+side by side inside the container  */
+  padding-bottom: 20px;
+  gap: 20px;
+  /* always use with flex property  */
 }
 
-.footer-links a:hover{
-    color: red;
-    padding-left: 15px;
-    transition: all 200ms;
-}
-.footer-col{
-    width: 20%;
-}
-.footer-col1{
-    width: 30%;
-}
-.footer-col4{
-    width: 30%;
+.footer-top-part h4 {
+  margin-bottom: 15px;
+  font-size: 20px;
 }
 
+.footer-bottom-part {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 0;
+  /* border: 1px solid grey; */
+  gap: 12px;
+}
+.footer-links a {
+  display: block;
+  text-decoration: none;
+  margin-bottom: 15px;
+  color: black;
+}
 
+.footer-links a:hover {
+  color: red;
+  padding-left: 15px;
+  transition: all 200ms;
+}
+.footer-col {
+  width: 20%;
+}
+.footer-col1 {
+  width: 30%;
+}
+.footer-col4 {
+  width: 30%;
+}
+
+  

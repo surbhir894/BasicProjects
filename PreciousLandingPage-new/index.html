@@ -12,7 +12,7 @@
       }
       body {
         font-size: 16px;
-        background: #efefef;
+        background: #fff;
       }
 
       .container {
@@ -38,17 +38,6 @@
         padding-right: 70px;
       }
 
-      button {
-        background-color: #ff3300;
-        color: #fff;
-        border: none;
-        padding: 10px 20px;
-        cursor: pointer;
-        border-radius: 5px;
-        /* margin-left: 494px; */
-        /* margin-bottom: 20px; */
-        transition: background-color 0.3s;
-      }
       .sub-menu-items,
       .menu-items {
         display: flex;
@@ -79,9 +68,9 @@
         color: red;
       }
 
-      .logo-name {
-        /* padding-left: 15px; */
-      }
+      /* .logo-name {
+         padding-left: 15px; 
+      } */
 
       .sub-menu-items {
         flex-direction: column;
@@ -97,60 +86,24 @@
         left: 0;
       }
 
+      button {
+        background-color: #ff3300;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        border-radius: 5px;
+        /* margin-left: 494px; */
+        /* margin-bottom: 20px; */
+        transition: background-color 0.3s;
+      }
+
       /* MAIN  */
+
       .main-content {
         height: 500px;
       }
 
-      /* FOOTER  */
-
-      .app-footer {
-        background: #fff;
-        padding: 50px;
-      }
-      .footer-top-part {
-        display: flex;
-        /* to align all the div 
-    side by side inside the container  */
-        padding-bottom: 20px;
-        gap: 20px;
-        /* always use with flex property  */
-      }
-
-      .footer-top-part h4 {
-        margin-bottom: 15px;
-        font-size: 20px;
-      }
-
-      .footer-bottom-part {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 15px 0;
-        /* border: 1px solid grey; */
-        gap: 12px;
-      }
-      .footer-links a {
-        display: block;
-        text-decoration: none;
-        margin-bottom: 15px;
-        color: black;
-      }
-
-      .footer-links a:hover {
-        color: red;
-        padding-left: 15px;
-        transition: all 200ms;
-      }
-      .footer-col {
-        width: 20%;
-      }
-      .footer-col1 {
-        width: 30%;
-      }
-      .footer-col4 {
-        width: 30%;
-      }
       .logo-name img {
         width: 100px;
         padding: 9px;
@@ -164,7 +117,7 @@
 
       .main {
         padding: 120px 0; /* Adds space above and below the section */
-        background: #fefefe; 
+        background: #fefefe;
       }
 
       .row {
@@ -175,13 +128,13 @@
 
       .col-6 {
         flex: 1;
-        padding: 20px; 
+        padding: 20px;
       }
 
       .text-content h1 {
-        font-size: 48px; 
-        color: #001f60; 
-        margin-bottom: 20px; 
+        font-size: 48px;
+        color: #001f60;
+        margin-bottom: 20px;
       }
 
       .text-content p {
@@ -215,25 +168,22 @@
       .heading {
         text-align: center;
         font-size: large;
-        padding-top: 30px; 
-        background: #fefefe; 
+        padding-top: 30px;
+        background: #fefefe;
       }
       .disc {
         text-align: center;
-        background: #fefefe; 
-        /* padding: 20px; */
-        
+        background: #fefefe;
+        padding: 20px;
       }
-      .container-title{
-
-        background: #fefefe; 
+      .container-title {
+        background: #fefefe;
         padding: 86px;
       }
 
-      .container-width{
+      .container-width {
         padding: 0 65px;
       }
-
 
       .about-text h2 {
         font-weight: bold;
@@ -242,21 +192,165 @@
         margin-bottom: 10px;
         line-height: 60px;
         font-size: 42px;
-    }
+      }
 
-
-        .about-text>.disc {
+      .about-text > .disc {
         font-size: 20px;
         max-width: 900px;
         font-weight: 200;
-        margin: 0 auto;
-            color: grey;
-        }
+        margin: 10px auto;
+        color: grey;
+      }
+
+      /* FORM  */
+      input[type="text"],
+      select,
+      textarea {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        resize: vertical;
+      }
+
+      label {
+        padding: 12px 12px 12px 0;
+        display: inline-block;
+      }
+      input[type="submit"] {
+        background-color: #04aa6d;
+        color: white;
+        padding: 5px 13px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        align-items: center;
+        margin-left: 73px;
+        margin-bottom: 20px;
+      }
+      input[type="submit"]:hover {
+        background-color: #45a049;
+      }
+      .container1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 5px;
+        background-color: #fff;
+        padding: 5opx;
+      }
+      .col-25 {
+        width: 25%;
+        margin-top: 6px;
+      }
+      .col-75 {
+        width: 75%;
+        margin-top: 6px;
+      }
+      .head-title {
+        color: #000000;
+        text-align: center;
+        border: 1px dotted gray;
+        padding: 15px;
+      }
+      /* FOOTER  */
+
+      .app-footer {
+        background: #fff;
+        padding: 50px;
+        background: url(./assets/images/footerwave.png);
+        background-size: cover;
+        background-position: bottom;
+        background-color: #36373c;
+        padding-top: 50px;
+      }
+      .footer-top-part {
+        display: flex;
+        /* to align all the div 
+    side by side inside the container  */
+        padding-bottom: 20px;
+        gap: 20px;
+        /* always use with flex property  */
+      }
+
+      .footer-top-part h4 {
+        margin-bottom: 15px;
+        font-size: 20px;
+      }
+
+      .footer-bottom-part {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 15px 0;
+        /* border: 1px solid grey; */
+        color: white;
+        gap: 12px;
+      }
+      .footer-links a {
+        display: block;
+        text-decoration: none;
+        margin-bottom: 15px;
+        color: white;
+      }
+
+      .footer-links a:hover {
+        color: red;
+        padding-left: 15px;
+        transition: all 200ms;
+      }
+      .footer-col {
+        width: 20%;
+      }
+      .footer-col1 {
+        width: 30%;
+      }
+      .footer-col1 h4,
+      .footer-col2 h4,
+      .footer-col3 h4,
+      .footer-col4 h4 {
+        color: white;
+      }
+      .footer-col1 p,
+      .footer-col4 p {
+        color: white;
+      }
+
+      .footer-col4 {
+        width: 30%;
+      }
 
 
+      /* CARDS  */
+
+      .image img{
+        width: 40%;
+      border-radius: 50%;
+      }
+      .card{
+        margin: 20px;
+        padding: 15px;
+        text-align: center;
+      border: 1PX solid #ddd;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s,box-shadow 0.3s;
+      border-radius: 8px;
+      background-color: #fff;
+      }
+      .card:hover{
+        transform:translateY(-5px);
+        box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+      }
+      .user-profile{
+        border: 1px dotted gray;
+        padding: 15px;
+        text-align: center;
+      }
+     
     </style>
   </head>
   <body>
+    <!-- header  -->
     <section class="header container-width">
       <header class="app-header">
         <div class="logo-name">
@@ -264,7 +358,6 @@
             src="./assets/images/preciousLogoSquare.png"
             alt="Precious Infosystem"
           />
-          <img src="./assets/images/ils_13.svg" alt="">
         </div>
         <nav>
           <ul class="menu-items">
@@ -309,8 +402,9 @@
       </header>
     </section>
 
+    <!-- main  -->
     <section class="main container-width">
-      <div class="container-title ">
+      <div class="container-title">
         <div class="row">
           <div class="col-6 text-content">
             <h1>Developing Software For Your Digital Success</h1>
@@ -332,8 +426,9 @@
       </div>
     </section>
 
+    <!-- main bottom  -->
     <section>
-      <div class="container-title container-width  about-text">
+      <div class="container-title container-width about-text">
         <div class="heading">
           <h2>Empowering Digital Success through Software Solutions</h2>
         </div>
@@ -350,31 +445,144 @@
       </div>
     </section>
 
+    <!-- form  -->
+    <section>
+      <div class="head-title">
+        <h1>Contact Us</h1>
+      </div>
+      <div class="container1">
+        <form>
+          <div class="row">
+            <div class="col-25">
+              <label for="fname">First Name</label>
+            </div>
+            <div class="col-75">
+              <input
+                type="text"
+                id="fname"
+                name="firstname"
+                placeholder="Your name"
+              />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-25">
+              <label for="lname">Last Name</label>
+            </div>
+            <div class="col-75">
+              <input
+                type="text"
+                id="lname"
+                name="lastname"
+                placeholder="Last name"
+              />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-25">
+              <label for="country">country</label>
+            </div>
+            <div class="col-75">
+              <select id="country" name="country">
+                <option value="australia">Australia</option>
+                <option value="india">India</option>
+                <option value="USA">usa</option>
+                <option value="England">England</option>
+              </select>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-25">
+              <label for="subject">Subject</label>
+            </div>
+            <div class="col-75">
+              <textarea placeholder="enter message"></textarea>
+            </div>
+          </div>
+          <br />
+          <div class="row">
+            <input type="submit" value="Submit" />
+          </div>
+        </form>
+      </div>
+    </section>
+
+     <!-- CARDS  -->
+    <section>
+      <div class="user-profile">
+        <h1>User Profile</h1>
+      </div>
+     
+      <div class="container1">
+     
+        <div class="row">
+        
+          <div class="col-6">
+            <div class="card">
+              <div class="image">
+                <img src="./assets/images/dev1.jpeg" alt="pic"/>
+              </div>
+              <h2>Mr.....</h2>
+              <h3 class="position">CEO & Founder</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Voluptatum, eum.
+              </p>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="card">
+              <div class="image">
+                <img src="./assets/images/dev2.jpeg" alt="pic"/>
+              </div>
+              <h2>Mr....... </h2>
+              <h3 class="position">Senior Devloper</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Voluptatum, eum.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer  -->
     <section class="footer">
       <footer class="app-footer">
-        <div class="container">
+        <div class="container2">
           <div class="footer-top-part">
             <div class="footer-col footer-col1">
-              <h4>Company Name</h4>
+              <h4>Precious Infosystem Pvt. Ltd.</h4>
+              <p>Our Commitment: Making Technology Work for You</p>
             </div>
             <div class="footer-col footer-col2">
               <h4>Company Name</h4>
               <div class="footer-links">
-                <a href="#"></a>
-                <a href="#"></a>
-                <a href="#"></a>
+                <a href="#">Industries we serve</a>
+                <a href="#">Press Release</a>
+                <a href="#">Portfolio</a>
               </div>
             </div>
             <div class="footer-col footer-col3">
-              <h4>Company Name</h4>
+              <h4>Services</h4>
               <div class="footer-links">
-                <a href="#"></a>
-                <a href="#"></a>
-                <a href="#"></a>
+                <a href="#">Website Development</a>
+                <a href="#">Mobile App Development</a>
+                <a href="#">Software Development</a>
+                <a href="#">Full Stack Development</a>
+                <a href="#">UI/UX Design</a>
+                <a href="#">Digital Marketing</a>
               </div>
             </div>
             <div class="footer-col footer-col4">
-              <h4>Company Name</h4>
+              <h4>Contact Us</h4>
+              <p>
+                01, MR 9, Scheme No 51, Sector B, Chandra Nagar, <br />
+                Indore, Madhya Pradesh, India ( 452010 )
+              </p>
+              <p>contact@preciousinfosystem.com</p>
+              <p>P: +91- 7880087103</p>
             </div>
           </div>
           <div class="footer-bottom-part">
