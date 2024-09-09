@@ -1,0 +1,131 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-size: 16px;
+    background: #efefef;
+}
+
+.container{
+    padding: 0 15px;
+    max-width:1140px;
+    margin: 0 auto;
+    /* To center the container  */
+}
+.app-header{
+    background: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    /* OVERLAY PROPERTY  */
+    height: 70px;
+    /* overflow: hidden ; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sub-menu-items,
+.menu-items{
+    display: flex;
+    list-style: none;
+    padding: 0;
+    background: #fff;
+   
+}
+.menu-items li {
+    position: relative;
+}
+
+.sub-menu-items li a,
+.menu-items li  a{
+    color: #000000;
+    text-decoration: none;
+    padding: 5px 15px;
+    display: inline-block;
+}
+
+.sub-menu-items li a:hover,
+.menu-items li a:hover{
+    color: red;
+}
+
+.logo-name{
+    padding-left: 15px;
+}
+
+
+.sub-menu-items {
+    flex-direction: column;
+    padding: 10px 0;
+    border: 1px solid grey;
+    border-radius: 8px;
+    display: none;
+}
+.menu-items li:hover ul{
+    display: flex;
+    position: absolute;
+    top: 28px;
+    left: 0;
+
+}
+
+
+/* MAIN  */
+.main-content{
+    height: 500px;
+}
+
+/* FOOTER  */
+
+.app-footer{
+    background: #fff;
+    padding: 50px;
+}
+.footer-top-part{
+    display: flex;
+    /* to align all the div 
+    side by side inside the container  */
+    padding-bottom: 20px;
+    gap: 20px;
+    /* always use with flex property  */
+}
+
+.footer-top-part h4{
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+.footer-bottom-part{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 0;
+    /* border: 1px solid grey; */
+    gap: 12px;
+}
+.footer-links a{
+    display: block;
+    text-decoration: none;
+    margin-bottom: 15px;
+    color: black;
+}
+
+.footer-links a:hover{
+    color: red;
+    padding-left: 15px;
+    transition: all 200ms;
+}
+.footer-col{
+    width: 20%;
+}
+.footer-col1{
+    width: 30%;
+}
+.footer-col4{
+    width: 30%;
+}
+
+
