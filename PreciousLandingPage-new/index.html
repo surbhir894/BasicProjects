@@ -215,7 +215,8 @@
 
       label {
         padding: 12px 12px 12px 0;
-        display: inline-block;
+        display: flex;
+        flex-direction: column;
       }
       input[type="submit"] {
         background-color: #04aa6d;
@@ -231,13 +232,15 @@
       input[type="submit"]:hover {
         background-color: #45a049;
       }
-      .container1 {
+      .container {
+        width: 80%;
         display: flex;
-        justify-content: center;
-        align-items: center;
         border-radius: 5px;
         background-color: #fff;
-        padding: 5opx;
+        padding: 20px;
+        justify-content: center;
+        align-items: center;
+   
       }
       .col-25 {
         width: 25%;
@@ -320,33 +323,31 @@
         width: 30%;
       }
 
-
       /* CARDS  */
 
-      .image img{
+      .image img {
         width: 40%;
-      border-radius: 50%;
+        border-radius: 50%;
       }
-      .card{
+      .card {
         margin: 20px;
         padding: 15px;
         text-align: center;
-      border: 1PX solid #ddd;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s,box-shadow 0.3s;
-      border-radius: 8px;
-      background-color: #fff;
+        border: 1px solid #ddd;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s, box-shadow 0.3s;
+        border-radius: 8px;
+        background-color: #fff;
       }
-      .card:hover{
-        transform:translateY(-5px);
-        box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+      .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
       }
-      .user-profile{
+      .user-profile {
         border: 1px dotted gray;
         padding: 15px;
         text-align: center;
       }
-     
     </style>
   </head>
   <body>
@@ -450,7 +451,7 @@
       <div class="head-title">
         <h1>Contact Us</h1>
       </div>
-      <div class="container1">
+      <div class="container">
         <form>
           <div class="row">
             <div class="col-25">
@@ -507,20 +508,18 @@
       </div>
     </section>
 
-     <!-- CARDS  -->
+    <!-- CARDS  -->
     <section>
       <div class="user-profile">
         <h1>User Profile</h1>
       </div>
-     
-      <div class="container1">
-     
+
+      <div class="container">
         <div class="row">
-        
           <div class="col-6">
             <div class="card">
               <div class="image">
-                <img src="./assets/images/dev1.jpeg" alt="pic"/>
+                <img src="./assets/images/dev1.jpeg" alt="pic" />
               </div>
               <h2>Mr.....</h2>
               <h3 class="position">CEO & Founder</h3>
@@ -533,10 +532,10 @@
           <div class="col-6">
             <div class="card">
               <div class="image">
-                <img src="./assets/images/dev2.jpeg" alt="pic"/>
+                <img src="./assets/images/dev2.jpeg" alt="pic" />
               </div>
-              <h2>Mr....... </h2>
-              <h3 class="position">Senior Devloper</h3>
+              <h2>Mr.......</h2>
+              <h3 class="position">Senior Developer</h3>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Voluptatum, eum.
