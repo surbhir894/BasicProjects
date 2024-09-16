@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo-element</title>
+    <style>
+        *{
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            font-size: 16px;
+            background-color: rgb(193, 150, 182);
+        }
+        .todo-application {
+            border: 1px solid #eeeeee;
+            max-width: 400px;
+            margin: 20px auto 0 auto;
+            /* to center the container */
+            padding: 10px 20px;
+            border-radius: 10px;
+            height: calc(100vh - 40px);
+            border: 2px solid red;
+
+        }
+        h1 {
+            font-size: 30px;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        .todo-form {
+            margin-bottom: 15px;
+            border: 1px solid #eeeeee;
+            padding: 10px;
+            background-color: rgb(207, 212, 217);
+        }
+        input[type="text"] {
+            border: none;
+            padding: 15px;
+            /* font-size: 14px; */
+            width: 88%;
+            outline: 1px solid rgb(199, 199, 235);
+        }
+        .todoValue
+         {
+            margin: 15px;
+            background-image: url(assets/view2.jpeg);
+            border: 2px solid red ;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 15px;
+            background-color: rgb(75, 75, 219);
+            color: white;
+            border: 1px solid rgb(44, 39, 39);
+                        display: block;
+                        margin: auto;
+
+        }
+        .todo-content {
+            background-image: url(assets/view3.jpeg);
+            background-repeat: no-repeat;
+            object-fit: cover;
+            /* background-position: center; */
+            background-size: cover;
+            /* width: 87%; */
+            height: calc(100vh - 188px);
+        }
+        .todo-application{
+            background-image: url(assets/view2.jpeg);
+            background-repeat: no-repeat;
+            object-fit: cover;
+            background-size: cover;
+        }
+        .todo-form{
+            background-image: url(assets/view1.jpeg);
+            border: 2px solid red;
+        }
+        .todo-footer{
+         text-align: center;
+        }
+
+    </style>
+  </head>
+  <body>
+<div class="todo-application">
+  <div class="todo-header">
+    <h1>Todo List Application</h1>
+  </div>
+
+  <div class="todo-content">
+    <form   class="todo-form" action="">
+        <div>
+          <input type="text" name="" id="" class="todoValue" />
+          <button class="btn">Add Todo</button>
+        </div>
+        <div class="todoLists"></div>
+      </form>
+  </div>
+
+  <div class="todo-footer">
+    &copy;Copyright 2024
+.  </div>
+</div>
+
+    <script>
+      const todoLists = document.querySelector(".todoLists");
+      const todoValue = document.querySelector(".todoValue");
+
+      //  get data in localStorage
+      let todoListValue = [];
+
+      const getTodoListFromLS = () => {
+        return JSON.parse(localStorage.getItem("todo")) || [];
+      };
+      //  show the data in localStorage
+      const addTodoListLocalStorage = (todo) => {
+        return localStorage.setItem("todo", JSON.stringify(todo));
+      };
+
+      const showTodoList = () => {
+        todoListValue = getTodoListFromLS();
+        todoListValue.forEach((curTodo) => {
+          const liElement = document.createElement("li");
+          liElement.innerHTML = curTodo;
+          todoLists.append(liElement);
+        });
+      };
+
+      const removeTodoList = (e) => {
+        console.log(e.target.textContent);
+        let currentTodo = e.target;
+        console.log(todoListValue);
+
+        updatedTodoList = todoListValue.filter(
+          (curTodoValue) => curTodoValue != currentTodo.textContent
+        );
+
+        addTodoListLocalStorage(todoListValue);
+        currentTodo.remove();
+        console.log(updatedTodoList);
+      };
+
+      const addTodoList = (e) => {
+        e.preventDefault();
+
+        todoListValue = getTodoListFromLS();
+        let newTodo = todoValue.value.trim();
+
+        console.log(newTodo);
+        todoValue.value = " ";
+
+        if (newTodo.length != 0 && !todoListValue.includes(newTodo)) {
+          // for romoving duplicate value
+          console.log(typeof todoListValue);
+          todoListValue.push(newTodo);
+          //   for unique value.....
+          todoListValue = [...new Set(todoListValue)];
+          //   addTodoListLocalStorage(todoListValue);
+
+          const liElement = document.createElement("li");
+          liElement.innerHTML = newTodo;
+          todoLists.append(liElement);
+        }
+      };
+      showTodoList();
+
+      document.querySelector(".btn").addEventListener("click", (e) => {
+        addTodoList(e);
+      });
+
+      todoLists.addEventListener("click", (e) => removeTodoList(e));
+    </script>
+  </body>
+</html>
